@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html id="html" lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <title>Tailwind Css</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/dist/output.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/input.css" />
+      </head>
+      <body id="body" class="font-iransans">
+        <section
+          class="relative overflow-hidden lg:container h-[50vh] lg:min-h-[722px] bg-gradient-to-t from-sky-700 to-sky-50 dark:from-slate-900 dark:to-slate-800 mx-auto flex justify-center flex-wrap"
+        >
+          <header
+            class="w-[100%] md:container z-50 h-[60px] flex justify-center fixed top-0"
+          >
+            <nav
+              class="w-[100%] lg:w-[80%] bg-sky-100 dark:bg-slate-700 flex justify-between items-center p-[2px]"
+            >
+              <div
+                onclick="mode(this)"
+                class="w-fit h-fit pr-1 flex justify-center items-center cursor-pointer"
+              >
+                <svg
+                  id="light"
+                  class="h-8 w-8 text-black"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                  />
+                </svg>
+
+                <svg
+                  id="dark"
+                  class="h-8 w-8 text-white hidden"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"
+                  />
+                  <line x1="9.7" y1="17" x2="14.3" y2="17" />
+                </svg>
+              </div>
+              <ul
+                class="hidden md:flex w-[70%] text-[12px] sm:text-[14px] md:text-[16px] h-[100%] justify-evenly"
+              >
+                <li
+                  class="h-[100%] hover:bg-sky-300 dark:hover:bg-sky-900 dark:text-gray-200 flex-1 cursor-pointer flex justify-center items-center font-[700]"
+                >
+                  <a href="#">خانه</a>
+                </li>
+                <li
+                  class="h-[100%] hover:bg-sky-300 dark:hover:bg-sky-900 dark:text-gray-200 flex-1 cursor-pointer flex justify-center items-center font-[700]"
+                >
+                  <a href="#">درباره من</a>
+                </li>
+                <li
+                  class="h-[100%] hover:bg-sky-300 dark:hover:bg-sky-900 dark:text-gray-200 flex-1 cursor-pointer flex justify-center items-center font-[700]"
+                >
+                  <a href="#">تماس با من</a>
+                </li>
+                <li
+                  class="h-[100%] hover:bg-sky-300 dark:hover:bg-sky-900 dark:text-gray-200 flex-1 cursor-pointer flex justify-center items-center font-[700]"
+                >
+                  <a href="#">گالری تصاویر</a>
+                </li>
+                <li
+                  class="h-[100%] hover:bg-sky-300 dark:hover:bg-sky-900 dark:text-gray-200 flex-1 cursor-pointer flex justify-center items-center font-[700]"
+                >
+                  <a href="#">رزومه</a>
+                </li>
+              </ul>
+
+              <div class="w-[60%] flex md:hidden">
+                <svg
+                  onclick="humber()"
+                  class="h-8 w-8 text-black dark:text-gray-200 cursor-pointer"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 10h16M4 14h16M4 18h16"
+                  />
+                </svg>
+              </div>
+
+              <div
+                id="sideMenu"
+                class="w-[130px] h-[50vh] rounded-br-[50px] duration-300 flex md:hidden bg-gradient-to-b from-sky-800 to-sky-300 dark:from-slate-900 dark:to-slate-500 absolute top-0 left-[-100%]"
+              >
+                <ul class="w-full h-full flex flex-wrap content-start gap-3">
+                  <li class="w-[100%] flex justify-enf pr-1 text-white">
+                    <span class="cursor-pointer" onclick="sideMenu()"
+                      ><svg
+                        class="h-6 w-6 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                    </span>
+                  </li>
+                  <li
+                    class="w-[100%] flex justify-center hover:bg-sky-400 dark:hover:bg-sky-900 text-white text-[14px]"
+                  >
+                    <a href="#">خانه</a>
+                  </li>
+                  <li
+                    class="w-[100%] flex justify-center hover:bg-sky-400 dark:hover:bg-sky-900 text-white text-[14px]"
+                  >
+                    <a href="#">درباره من</a>
+                  </li>
+                  <li
+                    class="w-[100%] flex justify-center hover:bg-sky-400 dark:hover:bg-sky-900 text-white text-[14px]"
+                  >
+                    <a href="#">تماس با من</a>
+                  </li>
+                  <li
+                    class="w-[100%] flex justify-center hover:bg-sky-400 dark:hover:bg-sky-900 text-white text-[14px]"
+                  >
+                    <a href="#">گالری تصاویر</a>
+                  </li>
+                  <li
+                    class="w-[100%] flex justify-center hover:bg-sky-400 dark:hover:bg-sky-900 text-white text-[14px]"
+                  >
+                    <a href="#">رزومه</a>
+                  </li>
+                </ul>
+              </div>
+
+              <figure
+                class="w-[30%] sm:w-[20%] h-[100%] flex justify-center items-center"
+              >
+                <img
+                  class="w-[160px] sm:w-[90%]"
+                  src="assets/img/pngwing.com.png"
+                  alt="peyman motamedifar"
+                />
+              </figure>
+            </nav>
+          </header>
+
+          <div class="container md:w-[80%] mx-auto flex">
+            <div
+              class="hidden rounded-md shadow-md md:flex flex-wrap text-[12px] lg:text-[15px] bg-sky-100 dark:bg-slate-600 absolute z-20 top-0 bottom-[30%] lg:bottom-[50%] left-[10%] m-auto h-fit w-[30%] lg:p-4 p-2"
+            >
+              <h1 class="flex w-full mb-1 text-gray-900 dark:text-gray-200">
+                سلام، &nbsp;<strong> پیمان معتمدی فر </strong>&nbsp;هستم
+              </h1>
+              <p
+                id="p1"
+                class="flex w-full justify-start text-gray-700 dark:text-gray-200"
+              ></p>
+            </div>
+
+            <img
+              class="absolute z-10 bottom-0 w-[250px] md:w-[270px] lg:w-[550px] left-[calc(50%-175px)] lg:left-[calc(50%-300px)] xl:w-[650px] xl:left-[calc(50%-355px)] 2xl:w-[700px] 2xl:left-[calc(50%-450px)] object-contain"
+              src="assets/img/pey2.png"
+              alt=""
+            />
+
+            <div
+              class="absolute bottom-[-40px] left-[45%] translate-x-[-50%] h-[70%] aspect-square border-white border bg-gradient-to-b from-sky-700 to-sky-200 dark:from-slate-700 dark:to-slate-400 rounded-full"
+            ></div>
+
+            <div
+              class="absolute w-[30%] font-bold flex justify-center flex-wrap text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] xl:text-[30px] md:right-[15%] lg:right-[10%] right-[8%] top-0 bottom-[30%] m-auto h-[10%]"
+            >
+              <span
+                class="flex w-full text-sky-800 dark:text-sky-500 justify-center"
+                >Front-End</span
+              >
+              <div class="w-[100%] relative text-red-600 dark:text-red-500">
+                <span id="typing" class="flex justify-center"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- start section 2 -->
+
+        <section
+          class="container mx-auto flex justify-center py-20 lg:py-40 dark:bg-slate-900"
+        >
+          <div class="w-[80%] flex flex-wrap gap-3 justify-center">
+            <div
+              class="w-full flex shadow-xl dark:shadow-slate-800 flex-wrap md:w-[500px] lg:flex-1 p-2"
+            >
+              <div class="w-full">
+                <span
+                  class="text-sky-800 dark:text-sky-500 text-[16px] md:text-[18px] p-1"
+                  >درباره من</span
+                >
+                <h6
+                  class="text-gray-900 dark:text-gray-200 text-[16px] md:text-[18px] font-bold p-1 mt-1"
+                >
+                  کدهای تمیز تر
+                </h6>
+                <h6
+                  class="text-gray-900 dark:text-gray-200 text-[16px] md:text-[18px] font-bold p-1"
+                >
+                  طراحی بهتر
+                </h6>
+                <p
+                  class="text-gray-700 dark:text-gray-300 text-[14px] md:text-[16px] p-1"
+                >
+                  من توسعه دهنده بخش کلاینت هستم. مسلط به HTML ،CSS ،JAVASCRIPT
+                  ، و ... علاقه مند به ساختن وبسایت و برنامه های کاربردی تحت وب
+                  و طراحی سایت.
+                </p>
+              </div>
+
+              <div class="w-full p-2 flex justify-center flex-wrap">
+                <div
+                  class="w-full flex justify-end flex-wrap h-fit text-gray-700 dark:text-gray-300"
+                >
+                  :HTML
+                  <div class="relative w-full h-fit mt-1">
+                    <div
+                      class="absolute top-0 left-0 w-full h-[6px] bg-gray-500 rounded-sm"
+                    ></div>
+                    <div
+                      class="absolute top-0 left-0 w-[100%] h-[6px] bg-sky-900 dark:bg-sky-600 rounded-sm"
+                    ></div>
+                  </div>
+                </div>
+
+                <div
+                  class="w-full flex justify-end flex-wrap h-fit mt-2 text-gray-700 dark:text-gray-300"
+                >
+                  :CSS
+                  <div class="relative w-full h-fit mt-1">
+                    <div
+                      class="absolute top-0 left-0 w-full h-[6px] bg-gray-400 rounded-sm"
+                    ></div>
+                    <div
+                      class="absolute top-0 left-0 w-[100%] h-[6px] bg-sky-900 dark:bg-sky-600 rounded-sm"
+                    ></div>
+                  </div>
+                </div>
+
+                <div
+                  class="w-full flex justify-end flex-wrap h-fit mt-2 text-gray-700 dark:text-gray-300"
+                >
+                  :JAVASCRIPT
+                  <div class="relative w-full h-fit mt-1">
+                    <div
+                      class="absolute top-0 left-0 w-full h-[6px] bg-gray-400 rounded-sm"
+                    ></div>
+                    <div
+                      class="absolute top-0 left-0 w-[95%] h-[6px] bg-sky-900 dark:bg-sky-600 rounded-sm"
+                    ></div>
+                  </div>
+                </div>
+
+                <div
+                  class="w-full flex justify-end flex-wrap h-fit mt-2 text-gray-700 dark:text-gray-300"
+                >
+                  :React
+                  <div class="relative w-full h-fit mt-1">
+                    <div
+                      class="absolute top-0 left-0 w-full h-[6px] bg-gray-400 rounded-sm"
+                    ></div>
+                    <div
+                      class="absolute top-0 left-0 w-[80%] h-[6px] bg-sky-900 dark:bg-sky-600 rounded-sm"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-blue-600 shadow-xl dark:shadow-slate-800 w-[320px] md:w-[330px] mt-4 md:mt-1 transform rotate-Y-[35deg] flex justify-center items-center rounded-full overflow-hidden"
+            >
+              <img src="assets/img/peyman1.jpg" alt="پیمان معتمدی فر" />
+            </div>
+          </div>
+        </section>
+
+        <!-- start section 3 -->
+
+        <section
+          class="container mx-auto flex justify-center dark:bg-slate-900"
+        >
+          <div class="w-[80%]">
+            <div class="w-full flex justify-center">
+              <div class="flex flex-wrap w-[100%] md:w-[80%] lg:w-[70%]">
+                <h6
+                  class="flex w-[100%] justify-center mt-2 text-xl p-5 text-sky-900 dark:text-sky-500"
+                >
+                  سرویس ها
+                </h6>
+                <h5
+                  class="flex w-[100%] justify-center mt-2 text-xl font-bold p-5 dark:text-slate-200"
+                >
+                  پیشنهاد من
+                </h5>
+                <p
+                  class="flex w-[100%] justify-center mt-2 text-gray-700 dark:text-gray-300"
+                >
+                  اگر صاحب شرکت یا کسب و کاری هستید، پیشنهاد میکنم برای پیشرفت
+                  خودتون و ارائه کردن بهتر محصولات به مشتری ها و قوی تر کردن
+                  برندتون، بفکر داشتن یک وبسایت خوب باشید. در این ضمینه من
+                  میتونم برخی کارهارو براتون انجام بدم.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-[100%] flex flex-wrap justify-center lg:justify-between py-[90px]"
+            >
+              <div
+                class="w-[340px] mt-4 flex flex-wrap shadow-xl p-2 dark:shadow-slate-800"
+              >
+                <span
+                  class="w-[100%] text-sky-500 dark:text-sky-400 justify-start p-2 mb-1"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-7 h-7"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"
+                    />
+                  </svg>
+                </span>
+                <h4
+                  class="w-[100%] justify-start p-2 text-sky-800 dark:text-sky-500 font-bold"
+                >
+                  HTML/CSS
+                </h4>
+                <p
+                  class="w-[100%] flex justify-center text-gray-500 dark:text-gray-300 p-2"
+                >
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است،
+                </p>
+                <a class="text-[12px] text-gray-700 dark:text-gray-400" href="#"
+                  >اطلاعات بییشتر</a
+                >
+              </div>
+
+              <div
+                class="w-[340px] mt-4 flex flex-wrap shadow-xl p-2 dark:shadow-slate-800"
+              >
+                <span class="w-[100%] text-sky-500 justify-start p-2 mb-1"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-7 h-7"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"
+                    />
+                  </svg>
+                </span>
+                <h4
+                  class="w-[100%] justify-start p-2 text-sky-800 dark:text-sky-500 font-bold"
+                >
+                  HTML/CSS
+                </h4>
+                <p
+                  class="w-[100%] flex justify-center text-gray-500 dark:text-gray-300 p-2"
+                >
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است،
+                </p>
+                <a class="text-[12px] text-gray-700 dark:text-gray-400" href="#"
+                  >اطلاعات بییشتر</a
+                >
+              </div>
+              <div
+                class="w-[340px] mt-4 flex flex-wrap shadow-xl p-2 dark:shadow-slate-800"
+              >
+                <span class="w-[100%] text-sky-500 justify-start p-2 mb-1"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-7 h-7"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"
+                    />
+                  </svg>
+                </span>
+                <h4
+                  class="w-[100%] justify-start p-2 text-sky-800 dark:text-sky-500 font-bold"
+                >
+                  HTML/CSS
+                </h4>
+                <p
+                  class="w-[100%] flex justify-center text-gray-500 dark:text-gray-300 p-2"
+                >
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است،
+                </p>
+                <a class="text-[12px] text-gray-700 dark:text-gray-400" href="#"
+                  >اطلاعات بییشتر</a
+                >
+              </div>
+              <div
+                class="w-[340px] mt-4 flex flex-wrap shadow-xl p-2 dark:shadow-slate-800"
+              >
+                <span class="w-[100%] text-sky-500 justify-start p-2 mb-1"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-7 h-7"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"
+                    />
+                  </svg>
+                </span>
+                <h4
+                  class="w-[100%] justify-start p-2 text-sky-800 dark:text-sky-500 font-bold"
+                >
+                  HTML/CSS
+                </h4>
+                <p
+                  class="w-[100%] flex justify-center text-gray-500 dark:text-gray-300 p-2"
+                >
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است،
+                </p>
+                <a class="text-[12px] text-gray-700 dark:text-gray-400" href="#"
+                  >اطلاعات بییشتر</a
+                >
+              </div>
+              <div
+                class="w-[340px] mt-4 flex flex-wrap shadow-xl p-2 dark:shadow-slate-800"
+              >
+                <span class="w-[100%] text-sky-500 justify-start p-2 mb-1"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-7 h-7"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"
+                    />
+                  </svg>
+                </span>
+                <h4
+                  class="w-[100%] justify-start p-2 text-sky-800 dark:text-sky-500 font-bold"
+                >
+                  HTML/CSS
+                </h4>
+                <p
+                  class="w-[100%] flex justify-center text-gray-500 dark:text-gray-300 p-2"
+                >
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است،
+                </p>
+                <a class="text-[12px] text-gray-700 dark:text-gray-400" href="#"
+                  >اطلاعات بییشتر</a
+                >
+              </div>
+              <div
+                class="w-[340px] mt-4 flex flex-wrap shadow-xl p-2 dark:shadow-slate-800"
+              >
+                <span class="w-[100%] text-sky-500 justify-start p-2 mb-1"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-7 h-7"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"
+                    />
+                  </svg>
+                </span>
+                <h4
+                  class="w-[100%] justify-start p-2 text-sky-800 dark:text-sky-500 font-bold"
+                >
+                  HTML/CSS
+                </h4>
+                <p
+                  class="w-[100%] flex justify-center text-gray-500 dark:text-gray-300 p-2"
+                >
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است،
+                </p>
+                <a class="text-[12px] text-gray-700 dark:text-gray-400" href="#"
+                  >اطلاعات بییشتر</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- start section 4 -->
+
+        <section
+          class="container mx-auto flex justify-center dark:bg-slate-900"
+        >
+          <div class="w-[80%]">
+            <div class="w-full flex justify-center">
+              <div class="flex flex-wrap w-[100%] md:w-[80%] lg:w-[70%]">
+                <h6
+                  class="flex w-[100%] justify-center mt-2 text-xl p-5 text-sky-900 dark:text-sky-500"
+                >
+                  نمونه کار ها
+                </h6>
+                <h5
+                  class="flex w-[100%] justify-center mt-2 text-xl font-bold p-5 dark:text-gray-200"
+                >
+                  پروژه ها
+                </h5>
+                <p
+                  class="flex w-[100%] justify-center mt-2 text-gray-700 dark:text-gray-300"
+                >
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-[100%] flex flex-wrap justify-center lg:justify-between py-[90px]"
+            >
+              <div
+                class="w-[340px] mt-4 flex flex-wrap shadow-xl p-2 dark:shadow-slate-800"
+              >
+                <a href="https://peyman-web.ir/" target="_blank"
+                  ><img src="assets/img/m1.png" alt=""
+                /></a>
+              </div>
+
+              <div
+                class="w-[340px] mt-4 flex flex-wrap shadow-xl p-2 dark:shadow-slate-800"
+              >
+                <a
+                  href="https://peyman-web.ir/asset/portfolio/confer/index.html"
+                  target="_blank"
+                  ><img src="assets/img/m2.png" alt=""
+                /></a>
+              </div>
+
+              <div
+                class="w-[340px] mt-4 flex flex-wrap shadow-xl p-2 dark:shadow-slate-800"
+              >
+                <a
+                  href="https://peyman-web.ir/asset/portfolio/amazon/index.html"
+                  target="_blank"
+                  ><img src="assets/img/m3.png" alt=""
+                /></a>
+              </div>
+
+              <div
+                class="w-[340px] mt-4 flex flex-wrap shadow-xl p-2 dark:shadow-slate-800"
+              >
+                <a
+                  href="https://peyman-web.ir/asset/portfolio/weatherWebApplication/index.html"
+                  target="_blank"
+                  ><img src="assets/img/m4.png" alt=""
+                /></a>
+              </div>
+
+              <div
+                class="w-[340px] mt-4 flex flex-wrap shadow-xl p-2 dark:shadow-slate-800"
+              >
+                <a
+                  href="https://peyman-web.ir/asset/portfolio/piano/index.html"
+                  target="_blank"
+                  ><img src="assets/img/m5.png" alt=""
+                /></a>
+              </div>
+
+              <div
+                class="w-[340px] mt-4 flex flex-wrap shadow-xl p-2 dark:shadow-slate-800"
+              >
+                <a
+                  href="https://peyman-web.ir/asset/portfolio/menu2/index4.html"
+                  target="_blank"
+                  ><img src="assets/img/m6.png" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- start section 5 -->
+
+        <section
+          class="container mx-auto flex justify-center py-[30px] md:py-[60px] dark:bg-slate-900"
+        >
+          <div class="w-[80%]">
+            <div class="w-full flex justify-center">
+              <div class="flex flex-wrap w-[100%] md:w-[80%] lg:w-[70%]">
+                <h6
+                  class="flex w-[100%] justify-center mt-2 text-xl p-5 text-sky-900 dark:text-sky-500"
+                >
+                  تماس با من
+                </h6>
+                <h5
+                  class="flex w-[100%] justify-center mt-2 text-xl font-bold p-5 dark:text-gray-200"
+                >
+                  سوالی دارید؟
+                </h5>
+                <p
+                  class="flex w-[100%] justify-center mt-2 text-gray-700 dark:text-gray-300"
+                >
+                  لطفا سوالات، نظرات، پیشنهادات و انتقادات خودتون رو در این بخش
+                  برام بفرستید
+                </p>
+              </div>
+            </div>
+
+            <div class="w-full flex justify-center mt-[40px]">
+              <form
+                class="flex w-[100%] md:w-[80%] lg:w-[50%] flex-wrap justify-center"
+                action=""
+              >
+                <input
+                  class="w-full rounded-sm p-1 mt-2 border border-sky-600 dark:bg-slate-600 dark:text-gray-300"
+                  type="text"
+                  required
+                  placeholder="نام و نام خانوادگی"
+                />
+                <input
+                  class="w-full rounded-sm p-1 mt-2 border border-sky-600 dark:bg-slate-600 dark:text-gray-300"
+                  type="email"
+                  required
+                  placeholder=" ایمیل"
+                />
+                <textarea
+                  class="w-full rounded-sm p-1 mt-2 border border-sky-600 dark:bg-slate-600 dark:text-gray-300"
+                  cols="30"
+                  rows="5"
+                  placeholder="پیام شما..."
+                ></textarea>
+                <button
+                  class="w-[60%] p-2 bg-sky-500 dark:bg-sky-800 text-white mt-[10px] rounded-sm"
+                >
+                  ارسال
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- start section 6 -->
+
+        <section class="bg-sky-950 dark:bg-slate-800">
+          <div class="container mx-auto flex justify-center">
+            <div
+              class="w-[80%] flex flex-wrap justify-between gap-2 items-center px-2 py-3"
+            >
+              <figure
+                class="flex justify-center w-[35%] sm:w-[30%] md:w-[20%] h-[50%] md:h-[100%]"
+              >
+                <img
+                  class="w-[160px] md:w-[90%] bg-white dark:bg-slate-500 rounded-sm p-[2px]"
+                  src="assets/img/pngwing.com.png"
+                  alt="peyman motamedifar"
+                />
+              </figure>
+
+              <div class="flex gap-4 w-[30%] md:w-[15%]">
+                <span
+                  ><a href="https://www.linkedin.com/in/peymanweb/"
+                    ><svg
+                      class="h-6 w-6 text-white hover:text-sky-600"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                      />
+                      <rect x="2" y="9" width="4" height="12" />
+                      <circle cx="4" cy="4" r="2" /></svg></a
+                ></span>
+                <span
+                  ><a href="https://www.instagram.com/peyman_web/"
+                    ><svg
+                      class="h-6 w-6 text-white hover:text-sky-600"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                      <path
+                        d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                      />
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg></a
+                ></span>
+                <span
+                  ><a href="https://github.com/peymanmotamedifar"
+                    ><svg
+                      class="h-6 w-6 text-white hover:text-sky-600"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      /></svg></a
+                ></span>
+              </div>
+
+              <div class="flex justify-center w-[100%] md:w-[55%] mt-4 md:mt-0">
+                <p
+                  class="text-white flex justify-center dark:text-gray-200 w-[100%] text-[9px] sm:text-[12] md:text-sm"
+                >
+                  طراحی و توسعه داده شده با ❤ توسط &nbsp;<strong
+                    >پیمان معتمدی فر</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/typing.js"></script>
+      </body>
+    </html>
+  </body>
+</html>
